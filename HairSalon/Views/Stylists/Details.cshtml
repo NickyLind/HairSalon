@@ -6,9 +6,11 @@
 <h2>Stylist Details</h2>
 <hr />
 <h3>Stylist Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h3>
-<h4>Stylist Specialty: @Html.DisplayFor(model => model.Details)</h4>
-<br>
-<h5>Stylist's Clients: </h5>
+<div class="stylist">
+  <h4>Stylist Specialty: @Html.DisplayFor(model => model.Details)</h4>
+  <br>
+  <h5>Stylist's Clients: </h5>
+</div>
 <ul>
   @if (Model.Clients.Count == 0)
   {
