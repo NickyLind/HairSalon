@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using HairSalon.Models;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -37,7 +37,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.CliendId == id);
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       return View(thisClient);
     }
 
@@ -66,7 +66,7 @@ namespace HairSalon.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      _db.Items.Remove(thisClient);
+      _db.Clients.Remove(thisClient);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

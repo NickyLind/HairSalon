@@ -10,7 +10,7 @@ namespace HairSalon.Controllers
   {
     private readonly HairSalonContext _db;
 
-    public StylistsController(ToDoListContext db)
+    public StylistsController(HairSalonContext db)
     {
       _db = db;
     }
@@ -36,7 +36,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId = id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
 
@@ -56,14 +56,14 @@ namespace HairSalon.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId = id);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId = id);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
