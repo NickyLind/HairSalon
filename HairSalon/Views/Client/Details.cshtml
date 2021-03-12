@@ -1,7 +1,13 @@
-@* <h1>To Do List Item Details: </h1>
+@{
+  Layout = "_Layout";
+}
 
-<h2>@Model["item"].Description</h2>
-<h3>Category: @Model["category"].Name</h3>
+@model HairSalon.Models.Client
 
-<a href='/categories/@Model["category"].Id/items/new'>Add another item</a>
-<a href="/items">View all items</a> *@
+<h2>Client Details</h2>
+<hr />
+<h3>Client Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model>LastName)</h3>
+<h4>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h4>
+<p>Back to @Html.ActionLink("Client List", "Index")</p>
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+<p>@Html.ActionLink("Remove Client", "Delete", new { id = Model.ClientId })</p>

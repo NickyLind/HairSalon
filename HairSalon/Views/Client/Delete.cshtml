@@ -1,2 +1,14 @@
-@* <h1>Your list has been cleared!</h1>
-<p><a href="/classname">Back to list.</a></p> *@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h2>Are you sure you want to remove this client?</h2>
+
+<p>Client Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</p>
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" />
+}
+<p>back to @Html.ActionLink("Client List", "Index")</p>
