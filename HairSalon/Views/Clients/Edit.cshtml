@@ -21,6 +21,9 @@
   @Html.LabelFor(model => model.Description)
   @Html.EditorFor(model => model.Description)
 
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
   <input type="submit" value="Save" />
 }
 <p>Back to @Html.ActionLink("Client List", "Index")</p>
