@@ -4,23 +4,27 @@
 
 @model HairSalon.Models.Stylist
 
-<h2>Edit</h2>
+<h2><div class="clientEdit">Edit</div></h2>
 
 <h4>Edit this Stylist: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.StylistId)
+<div class="createForms">
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.StylistId)
 
-  @Html.LabelFor(model => model.FirstName, "First Name: ")
-  @Html.EditorFor(model => model.FirstName)
-  
-  @Html.LabelFor(model => model.LastName, "Last Name: ")
-  @Html.EditorFor(model => model.LastName)
-
-  @Html.LabelFor(model => model.Details, "Stylist Specialty: ")
-  @Html.EditorFor(model => model.Details)
-
-  <input type="submit" value="Save" />
-}
-<p>Back to @Html.ActionLink("Stylist List", "Index")</p>
+    @Html.LabelFor(model => model.FirstName, "First Name: ")
+    @Html.EditorFor(model => model.FirstName)
+    <br>
+    @Html.LabelFor(model => model.LastName, "Last Name: ")
+    @Html.EditorFor(model => model.LastName)
+    <br>
+    @Html.LabelFor(model => model.Details, "Stylist Specialty: ")
+    @Html.EditorFor(model => model.Details)
+    <br>
+    <input type="submit" value="Save" />
+  }
+</div>
+<div class="links">
+  <p>Back to @Html.ActionLink("Stylist List", "Index")</p>
+</div>

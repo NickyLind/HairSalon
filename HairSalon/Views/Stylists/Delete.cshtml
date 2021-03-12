@@ -3,12 +3,16 @@
 }
 
 @model HairSalon.Models.Stylist
-
-<h2>Are you sure you want to remove this Stylist?</h2>
-
+<div class="headerAlign">
+  <h2>Are you sure you want to remove this Stylist?</h2>
+</div>
 <h4>Stylist Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
-@using (Html.BeginForm())
-{
-  <input type="submit" value="Delete" />
-}
-<p>Back to @Html.ActionLink("Stylist List", "Index")</p>
+<div class="stylistDeleteButton">
+  @using (Html.BeginForm())
+  {
+    <input type="submit" value="Delete" />
+  }
+</div>
+<div class="links">
+  <p>Back to @Html.ActionLink("Stylist List", "Index")</p>
+</div>

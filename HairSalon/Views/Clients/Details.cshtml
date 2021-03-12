@@ -8,6 +8,8 @@
 <hr />
 <h3>Client Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h3>
 <h5>Appointment @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h5>
-<p>Back to @Html.ActionLink("Stylist List", "Index", "Stylists")</p>
-<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Remove Client", "Delete", new { id = Model.ClientId })</p>
+<div class="links">
+  <p>Back to @Html.ActionLink("Stylist List", "Index", "Stylists")</p>
+  <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+  <p>@Html.ActionLink("Remove Client", "Delete", new { id = Model.ClientId })</p>
+</div>

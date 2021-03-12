@@ -33,6 +33,10 @@ h2, h3  {
   font-size: 40px;
 }
 
+p {
+  font-family: 'Shadows Into Light', cursive;
+}
+
 .createForms  {
   font-family: 'Dosis', sans-serif;
   margin-left: 300px;
@@ -57,11 +61,34 @@ h2, h3  {
 .links {
   font-size: 20px;
   font-family: 'Shadows Into Light', cursive;
-  margin-left: 150px;
+  margin-left: 0px;
   margin-top: 100px;
 }
 
 
-.stylist h4, h5{
+.stylist h4, .stylist h5{
   text-align: left;
+  margin-top: 30px;
+}
+
+.lists .stylistClients  {
+  text-align: left;
+}
+
+h2  .clientEdit{
+  text-align: center;
+}
+
+input {
+  border-radius: 15px;
+  background-color: #B7B7A4;
+  color: #6b705c;
+}
+
+.stylistDeleteButton  {
+  margin-left: 500px;
+}
+
+.headerAlign  {
+  text-align: center;
 }
