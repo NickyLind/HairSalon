@@ -12,18 +12,18 @@
 {
   @Html.HiddenFor(model => model.ClientId)
 
-  @Html.LabelFor(model => model.FirstName)
+  @Html.LabelFor(model => model.FirstName, "First Name: ")
   @Html.EditorFor(model => model.FirstName)
-
-  @Html.LabelFor(model => model.LastName)
+  <br>
+  @Html.LabelFor(model => model.LastName, "Last Name: ")
   @Html.EditorFor(model => model.LastName)
-
-  @Html.LabelFor(model => model.Description)
+  <br>
+  @Html.LabelFor(model => model.Description, "Appointment Description: ")
   @Html.EditorFor(model => model.Description)
-
-  @Html.LabelFor(model => model.Stylist)
+  <br>
+  @Html.LabelFor(model => model.Stylist, "Stylist: ")
   @Html.DropDownList("StylistId")
-
+  <br>
   <input type="submit" value="Save" />
 }
-<p>Back to @Html.ActionLink("Client List", "Index")</p>
+<p>Back to @Html.ActionLink("Stylist List", "Index", "Stylists")</p>
