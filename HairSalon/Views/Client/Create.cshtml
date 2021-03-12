@@ -13,7 +13,10 @@
   @Html.LabelFor(model => model.LastName)
   @Html.TextBoxFor(model => model.LastName)
 
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+
   <input type="submit" value="Add new client" />
 }
 
-<p>@Html.ActionLink("Show all clients")</p>
+<p>Show all @Html.ActionLink("Clients")</p>
