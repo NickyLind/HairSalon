@@ -19,5 +19,6 @@
     <li>@Html.ActionLink($"{stylist.FirstName} {stylist.LastName}", "Details", new { id = stylist.StylistId })</li>   
   }
 </ul>
+<p>Add a new @Html.ActionLink("Client", "Create", "Clients")</p>
 <p>Add a new @Html.ActionLink("Stylist", "Create")</p>
 <p>Back to @Html.ActionLink("Home", "Index", "Home") page.</p>
