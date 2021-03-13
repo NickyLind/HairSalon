@@ -13,6 +13,9 @@
 * _MySql_
 * _MySql Workbench_
 * _Entity Framework_
+* _Bootstrap_
+* _CSS_
+* _ASP.NET Razor_
 
 ## Description
 
@@ -30,16 +33,28 @@ _This application will allow a user to add a client to list of specialized styli
 * _You can find the MySql Workbench download file at (https://dev.mysql.com/downloads/file/?id=484391) and follow along with the installer_
 * _For more in-depth instructions on setting up the MySql Community server and MySql Workbench for you specific OS visit (https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql)_
 * _Open MySql Workbench and select the Local instance 3306 server and enter the password you set up at installation_
-* __
-* _You will need to restore the dependencies and project specific tools by running the `$dotnet restore` command in the ProjectName directory, as well as build the project using the `$dotnet build` command in the same directory_
-* _To run the program, you will need to navigate to the ProjectName directory and run the command `$dotnet run`_
+* _In the MySql Workbench, in the Navigator/Administration window, select Data Import/Restore_
+* _In Import Options select Import from Self-Contained File, and navigate to the `nick_lindau.sql` file in the top level of the HairSalon.Solutions directory_
+* _Under Default Schema to be Imported To, select the New button, and make sure to name the schema nick\_lindau and click Ok._
+* _Click Start Import, then return to the Navigator > Schemas tab and right click and select Refresh All and the new database should appear_
+* _Now that the database is set up you will need to create a file called `appsettings.json` in the top level of the HairSalon directory and paste the following code:_
+```
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=nick_lindau;uid=[YourUserIdHere];pwd=[YourPasswordHere];"
+  }
+}
+```
+* _Make sure you replace the [YourUserIdHere] & [YourPasswordHere] with the username and password you created when you installed MySql Workbench_
+* _You will need to restore the dependencies and project specific tools by running the `$dotnet restore` command in the HairSalon directory, as well as build the project using the `$dotnet build` command in the same directory_
+* _To run the program, you will need to navigate to the HairSalon directory and run the command `$dotnet run`_
 * _If everything is working correctly a server should open up in localport:5000._
 * _You can type Http://localport:5000 into your browser search bar to acess the site_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Css is still being worked out to have a better looking flow between pages_
+
 
 ## License
 
