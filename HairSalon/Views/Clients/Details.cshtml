@@ -7,7 +7,9 @@
 <h2>Client Details</h2>
 <hr />
 <h3>Client Name: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h3>
-<h5>Appointment @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h5>
+<div class="stylist">
+  <h5>Appointment @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h5>
+</div>
 <div class="links">
   <p>Back to @Html.ActionLink("Stylist List", "Index", "Stylists")</p>
   <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
